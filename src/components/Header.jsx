@@ -10,10 +10,14 @@ import header3 from '../assets/header4.jpeg';
 import header4 from '../assets/header4.jpeg';
 import header5 from '../assets/header5.jpeg';
 import header6 from '../assets/header6.jpeg';
+import planoElite40 from '../assets/Planoelite40.png';
+
+import ModalPlano from './ModalPlano';
 
 const Header = () => {
   const swiperRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const [plano, setPlano] = useState(false);
 
   const toggleAutoplay = () => {
     if (!swiperRef.current) return;
@@ -26,89 +30,142 @@ const Header = () => {
     setIsPlaying(!isPlaying);
   };
 
+  const handleClick = () => {
+    const section = document.getElementById('inicio');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="head">
-      <Swiper
-        ref={swiperRef}
-        effect="cube"
-        grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
-        pagination={{ clickable: true }}
-        autoplay={{
-          delay: 2500, // ⏱ tiempo entre transiciones
-          disableOnInteraction: false, // el autoplay continúa después de interactuar
-          /*  pauseOnMouseEnter: true, */ // 🛑 pausa cuando el usuario pasa el mouse
-        }}
-        loop={true} // 🔁 para que siga en bucle infinito
-        modules={[EffectCube, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header1})` }}
+    <>
+      <div id="inicio" className="head">
+        <Swiper
+          ref={swiperRef}
+          effect="cube"
+          grabCursor={true}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+          pagination={{ clickable: true }}
+          autoplay={{
+            delay: 10000, // ⏱ tiempo entre transiciones
+            disableOnInteraction: false, // el autoplay continúa después de interactuar
+            /*  pauseOnMouseEnter: true, */ // 🛑 pausa cuando el usuario pasa el mouse
+          }}
+          loop={true} // 🔁 para que siga en bucle infinito
+          modules={[EffectCube, Pagination, Autoplay]}
+          className="mySwiper"
         >
-          {' '}
-          <div className="modelo">Grant Elite 60</div>
-        </SwiperSlide>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header1})` }}
+          >
+            <div className="modelo">
+              <h2>Grant Elite 60</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
 
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header2})` }}
-        >
-          <div className="modelo">Berlín 51</div>
-        </SwiperSlide>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header2})` }}
+          >
+            <div className="modelo">
+              <h2>Berlín 51</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
 
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header3})` }}
-        >
-          <div className="modelo">Elite 40</div>
-        </SwiperSlide>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header3})` }}
+          >
+            <div className="modelo">
+              <h2>Elite 40</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
 
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header4})` }}
-        >
-          <div className="modelo">Modelo 4</div>
-        </SwiperSlide>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header4})` }}
+          >
+            <div className="modelo">
+              <h2>Modelo 4</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
 
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header5})` }}
-        >
-          <div className="modelo">Modelo 5</div>
-        </SwiperSlide>
-        <SwiperSlide
-          className="slide"
-          style={{ backgroundImage: `url(${header6})` }}
-        >
-          <div className="modelo">Modelo 6</div>
-        </SwiperSlide>
-      </Swiper>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header5})` }}
+          >
+            <div className="modelo">
+              <h2>Modelo 5</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
 
-      <button className="autoplay-btn" onClick={toggleAutoplay}>
-        {isPlaying ? '⏸ Pausar' : '▶ Reanudar'}
-      </button>
+          <SwiperSlide
+            className="slide"
+            style={{ backgroundImage: `url(${header6})` }}
+          >
+            <div className="modelo">
+              <h2>Modelo 6</h2>
+              <div
+                className="modelo-plano"
+                style={{ backgroundImage: `url(${planoElite40})` }}
+                onClick={() => setPlano(true)}
+              ></div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
 
-      {/*   <div className="info">Ahora el sueño de tu casa propia es posible </div> */}
+        <button className="autoplay-btn" onClick={toggleAutoplay}>
+          {isPlaying ? '⏸ Pausar' : '▶ Reanudar'}
+        </button>
 
-      {/* 
-      <div class="text-container">
-        <p class="textMotion">JUNTOS CONSTRUIMOS TU SUEÑO !!!</p>
-      </div> */}
+        <div className="head-titulo">
+          <p className="headH1">Viviendas Seguras para toda la vida</p>
+          <p className="headH2">
+            construcción tradicional con ladrillos y columnas + perfiles de
+            acero
+          </p>
+        </div>
 
-      <div className="head-titulo">
-        <p className="headH1">Viviendas Seguras para toda la vida</p>
-        <p className="headH2">
-          construcción tradicional con calidad, eficiencia y confort superior.
-        </p>
+        <div className="container-logo" onClick={handleClick}>
+          {/*  <img src={logo} alt="Logo" /> */}
+        </div>
       </div>
-    </div>
+
+      {plano && (
+        <ModalPlano src={planoElite40} alt="plano" handleClose={setPlano} />
+      )}
+    </>
   );
 };
 

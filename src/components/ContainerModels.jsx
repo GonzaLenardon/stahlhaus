@@ -27,13 +27,13 @@ const grantElite60 = {
     {
       imagne: living,
       sector: 'Estar:',
-      descripcion: 'Estar comedor funcional',
+      descripcion: 'Comedor funcional',
     },
     { imagne: cochera, sector: 'Cochera:', descripcion: '1' },
     {
       imagne: galeria,
       sector: 'Galería:',
-      descripcion: 'Galería multifuncional',
+      descripcion: 'Funcional',
     },
     { imagne: medidas, sector: 'm² finales:', descripcion: '60' },
   ],
@@ -74,7 +74,7 @@ const elite40 = {
     {
       imagne: living,
       sector: 'Estar:',
-      descripcion: 'Estar comedor funcional',
+      descripcion: 'Comedor funcional',
     },
 
     { imagne: medidas, sector: 'm² finales:', descripcion: '40' },
@@ -85,12 +85,12 @@ const elite40 = {
 
 const ContainerModels = () => {
   return (
-    <div>
+    <div id="modelos">
       <div className="div-titulo-Modelo">
-        <p className="modelo-titulo">Modelos listos para vivir</p>
-        <p className="modelo-subtitulo">
+        <h2 className="modelo-titulo">Modelos listos para vivir</h2>
+        <h3 className="modelo-subtitulo">
           Elegí el modelo que mejor se adapta. Todos admiten personalizaciones.
-        </p>
+        </h3>
       </div>
       <Modelos modelo={grantElite60} />
       <Modelos modelo={berlin51} />
