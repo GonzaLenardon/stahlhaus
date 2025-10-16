@@ -9,35 +9,36 @@ const Proceso = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // 👇 Cuando entra al viewport (30% visible)
+          // ✅ Cuando el componente está al menos un 30% visible → agregar clase
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
             entry.target.classList.add('active');
-          } else {
-            // 👇 Cuando sale del viewport
+          }
+
+          // 🚫 Cuando deja de ser visible en absoluto → eliminar clase
+          if (entry.intersectionRatio === 0) {
             entry.target.classList.remove('active');
           }
         });
       },
-      { threshold: 0.3 } // activa al 30% visible
+      {
+        threshold: [0, 0.3, 1], // detecta cambios en 0%, 30% y 100%
+      }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
-    // limpieza al desmontar
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div className="container-proceso" ref={sectionRef}>
+    <div id="comenzar" className="container-proceso" ref={sectionRef}>
       <div className="comoempezar">
         Te cuento como EMPEZAR a construir TU SUEÑO
       </div>
 
       <div className="procesos paso-1">
         <article className="card-proceso">
-          <h3 className="proceso-titulo">Elegir el Modelo</h3>
+          <h3 className="proceso-titulo">1. Elegir el Modelo</h3>
           <p className="proceso-info">
             Junto a nuestros asesores podrás elegir el modelo que mejor se
             ajuste a tus necesidades, evaluando distribución, estilo y
@@ -56,7 +57,7 @@ const Proceso = () => {
         </div>
 
         <article className="card-proceso">
-          <h3 className="proceso-titulo"> Señar y Congelar el Precio</h3>
+          <h3 className="proceso-titulo">2. Congelar el Precio</h3>
           <p className="proceso-info">
             Una vez elegido el modelo, podrás señarlo para congelar el precio y
             seleccionar el plan de pago más conveniente para vos.
@@ -81,16 +82,33 @@ const Proceso = () => {
 
       <div className="procesosD paso-4">
         <div className="proceso-img">
-          {/* <img src={flechaD} alt="flechaDerecha" /> */}
+          <img src={flechaD} alt="flechaDerecha" />
         </div>
+
         <article className="card-proceso">
-          <h3 className="proceso-titulo"> ¡Disfrutar tu Nuevo Hogar!</h3>
+          <h3 className="proceso-titulo">
+            {' '}
+            ¡Disfruta de tu proyecto terminado!
+          </h3>
           <p className="proceso-info">
             {' '}
             Te entregamos la casa completamente terminada, lista para habitar,
             con garantía y asistencia postventa.
           </p>
         </article>
+      </div>
+
+      <div className="procesos paso-3">
+        <article className="card-proceso">
+          <h3 className="proceso-titulo">Sigamos</h3>
+          <p className="proceso-info">
+            Mira todos los modelos que tenemos para <strong>Vos </strong>
+          </p>
+        </article>
+
+        <div className="proceso-img">
+          <img src={flechaI} alt="flechaDerecha" />
+        </div>
       </div>
     </div>
   );

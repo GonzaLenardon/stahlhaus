@@ -3,11 +3,11 @@ import slogan from '../assets/vid3.mp4';
 
 const Contacto = () => {
   return (
-    <div className="container-contacto">
-      <div className="video-contacto">
+    <div id="contacto" className="container-contacto">
+      <div className="video-contacto ">
         <video
-          width="600px"
-          height="600px"
+          width="90%"
+          height="100%"
           autoPlay
           loop
           muted
@@ -21,16 +21,16 @@ const Contacto = () => {
       </div>
 
       <div className="contacto">
-        <p className="contacto-titulo">¿Empezamos tu vivienda?</p>
+        <p className="contacto-titulo">¿Empezamos a construir tu proyecto?</p>
 
-        <div class="text-container">
+        <div className="text-container">
           <p className="contacto-subtitulo">
             Contanos tu idea y te asesoramos sin cargo.
           </p>
         </div>
 
         <form id="contactForm" className="formulario">
-          <div className="input-group">
+          <div className="input-form">
             <label htmlFor="nombre">Nombre</label>
             <input
               type="text"
@@ -41,7 +41,7 @@ const Contacto = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-form">
             <label htmlFor="localidad">Localidad</label>
             <input
               type="text"
@@ -52,7 +52,7 @@ const Contacto = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-form">
             <label htmlFor="telefono">Telefono/Whatsapp</label>
             <input
               type="text"
@@ -63,7 +63,7 @@ const Contacto = () => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-form">
             <label htmlFor="email">Correo electrónico</label>
             <input
               type="email"
@@ -74,7 +74,7 @@ const Contacto = () => {
             />
           </div>
 
-          <div className="input-group full-width">
+          <div className="input-form full-width">
             <label htmlFor="mensaje">Mensaje</label>
             <textarea
               id="mensaje"

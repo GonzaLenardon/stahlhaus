@@ -48,10 +48,10 @@ const Modelos = ({ modelo }) => {
                 {modelo.caracteristicas.map((mod, i) => (
                   <li key={i}>
                     <img src={mod.imagne} alt={mod.sector} />
-                    <p>
+                    <span>
                       <strong>{mod.sector} </strong>
                       {mod.descripcion}
-                    </p>
+                    </span>
                   </li>
                 ))}
               </ul>
