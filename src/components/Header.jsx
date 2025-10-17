@@ -150,10 +150,10 @@ const Header = () => {
         </button>
 
         <div className="head-titulo">
-          <p className="headH1">Viviendas Seguras para toda la vida</p>
+          <p className="headH1">Construyendo Excelencia, Calidad y Seguridad</p>
           <p className="headH2">
             construcción tradicional con ladrillos y columnas + perfiles de
-            acero
+            acero y paredes de yeso.
           </p>
         </div>
 

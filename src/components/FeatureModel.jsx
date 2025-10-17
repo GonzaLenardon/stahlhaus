@@ -43,11 +43,14 @@ const FeaturedModels = () => {
     <section ref={sectionRef} id="models" className="container-info">
       <div className="info-titulo">
         <h1 className="titulo">Líderes en la Región</h1>
-        <h3 className="subtitulo">
+        {/* <h3 className="subtitulo">
           Tenemos el sistema de construcción más seguro y eficiente del país,
           con entrega inmediata.
+        </h3> */}
+        {/*  <h3 className="subtitulo fw-bold">Nos encargamos de TODO</h3> */}
+        <h3 className="subtitulo fw-bold">
+          Planes accesibles con financiacion propia - Apto creditos Hipotecarios
         </h3>
-        <h3 className="subtitulo fw-bold">Nos encargamos de TODO</h3>
       </div>
 
       <div className="cards-container">
