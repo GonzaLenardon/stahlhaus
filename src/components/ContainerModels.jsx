@@ -1,20 +1,20 @@
 import React from 'react';
 
-import img1 from '../assets/imagen1.jpeg';
+/* import img1 from '../assets/imagen1.jpeg';
 import img2 from '../assets/imagen2.jpeg';
 import img3 from '../assets/imagen3.jpeg';
 import img4 from '../assets/imagen4.jpeg';
 import img5 from '../assets/imagen5.jpeg';
-import living from '../assets/living.png';
+ */ import living from '../assets/living.png';
 import cocina from '../assets/cocina.png';
 import baño from '../assets/baño.png';
 import dormitorio from '../assets/dormitorio.png';
 import cochera from '../assets/cochera.png';
 import galeria from '../assets/galeria.png';
-import asador from '../assets/parrilla.png';
 import medidas from '../assets/medidas.png';
 import planoelite40 from '../assets/Planoelite40.png';
 import Modelos from './Modelos';
+import as from '../assets/parrilla.png';
 
 import natu1 from '../assets/natu/1.jpg';
 import natu2 from '../assets/natu/2.jpg';
@@ -145,7 +145,7 @@ const quincho = {
     { imagne: cocina, sector: 'Cocina:', descripcion: 'Cocina amplia' },
     { imagne: baño, sector: 'Baños:', descripcion: '1' },
     {
-      imagne: living,
+      imagne: as,
       sector: 'Asador:',
       descripcion: 'Asador y Comedor',
     },
