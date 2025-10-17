@@ -80,7 +80,7 @@ code {
   padding: 10px 16px;
   cursor: pointer;
   transition: 0.3s;
-  z-index: 9999999;
+  z-index: 9999;
 }
 .autoplay-btn:hover {
   background: rgba(0, 0, 0, 0.8);
@@ -348,7 +348,7 @@ code {
   right: 0;
   padding: 1.5em 3em;
   background: transparent;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 .nav.open {
@@ -902,8 +902,8 @@ textarea {
 
 .modal-content {
   position: relative;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1092,7 +1092,7 @@ footer a:hover {
 
   .modelo-ilustracion {
     flex-direction: column;
-    width: 100%;
+    margin-bottom: 1em;
   }
 
   .modelo-galeria {

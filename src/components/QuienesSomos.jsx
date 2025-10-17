@@ -7,15 +7,16 @@ const QuienesSomos = () => {
       <div className="row d-flex justify-content-around ">
         <div className="col-12 col-md-6">
           <h2 className="fs-2 fw-bold py-2 ">
-            Construimos confianza, no solo casas
+            Construimos confianza, no solo ladrillos
           </h2>
           <p className="fs-5 text-body-secondary">
             En{' '}
             <strong style={{ color: ' rgb(232, 217, 10)' }}>Stahl Haus </strong>{' '}
-            diseñamos y construimos{' '}
-            <strong>viviendas seguras de alta calidad, </strong> confiables y
-            duraderas. Trabajamos con métodos constructivos tradicionales que
-            garantizan precisión, rapidez de obra y terminaciones prolijas.
+            diseñamos y construimos
+            <strong> viviendas, locales y quinchos </strong> seguros y
+            confiables. Trabajamos con el sistema constructivo mas seguro del
+            país, que garantiza precisión, rapidez de obra y terminaciones de la
+            mas <strong> ALTA CALIDAD </strong>.
           </p>
           <p className="fs-5 text-body-secondary">
             Nuestro enfoque combina{' '}
@@ -23,8 +24,9 @@ const QuienesSomos = () => {
               {' '}
               innovación, eficiencia y satisfacción del cliente.{' '}
             </strong>{' '}
-            Acompañamos cada etapa: anteproyecto, planos, permisos, obra y
-            postventa.
+            Acompañamos cada etapa: anteproyecto, planos, permisos de obra,
+            construcción desde las bases hasta las terminaciones finales y
+            post-venta.
           </p>
         </div>
 

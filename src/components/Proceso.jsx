@@ -60,7 +60,8 @@ const Proceso = () => {
           <h3 className="proceso-titulo">2. Congelar el Precio</h3>
           <p className="proceso-info">
             Una vez elegido el modelo, podrás señarlo para congelar el precio y
-            seleccionar el plan de pago más conveniente para vos.
+            seleccionar el plan de pago que consideres más conveniente para tu
+            proyecto.
           </p>
         </article>
       </div>
@@ -70,8 +71,9 @@ const Proceso = () => {
           <h3 className="proceso-titulo">3. Firmar el Contrato</h3>
           <p className="proceso-info">
             {' '}
-            Con la documentación lista, firmamos el contrato y en menos de 90
-            días iniciamos la construcción de tu vivienda.
+            Tras la firma del contrato y la aprobación del plano final, tu obra
+            comienza en un máximo de 90 días. ¡Así empieza a hacerse realidad tu
+            proyecto!
           </p>
         </article>
 
@@ -86,14 +88,13 @@ const Proceso = () => {
         </div>
 
         <article className="card-proceso">
-          <h3 className="proceso-titulo">
-            {' '}
-            ¡Disfruta de tu proyecto terminado!
-          </h3>
+          <h3 className="proceso-titulo"> Entrega de llave</h3>
           <p className="proceso-info">
             {' '}
-            Te entregamos la casa completamente terminada, lista para habitar,
-            con garantía y asistencia postventa.
+            Concluido el proyecto y superada la inspección final, hacemos
+            entrega de las llaves para que comiences a disfrutar de una obra que
+            refleja <strong> calidad, excelencia y compromiso. </strong> Nuestra
+            garantía y servicio postventa aseguran tu tranquilidad.
           </p>
         </article>
       </div>
